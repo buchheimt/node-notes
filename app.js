@@ -1,11 +1,16 @@
-console.log('starting app');
+console.log('starting app.js');
 
 const fs = require('fs');
 const os = require('os');
+const notes = require('./notes');
 
-let user = os.userInfo();
-console.log(user);
+console.log(notes.add(7, 6));
 
-fs.appendFile('greetings.txt', `Hello ${user.username}!`, err => {
-  if (err) console.log('Unable to write to file');
-});
+// let res = notes.addNote();
+// console.log(res);
+
+// let user = os.userInfo();
+
+// fs.appendFile('greetings.txt', `Hello ${user.username}! You are ${notes.age}`, err => {
+//   if (err) console.log('Unable to write to file');
+// });
